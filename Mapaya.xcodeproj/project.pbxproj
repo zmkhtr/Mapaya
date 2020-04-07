@@ -13,6 +13,8 @@
 		2063452F243C186600A52945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063452D243C186600A52945 /* Main.storyboard */; };
 		20634531243C186800A52945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20634530243C186800A52945 /* Assets.xcassets */; };
 		20634534243C186800A52945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20634532243C186800A52945 /* LaunchScreen.storyboard */; };
+		20D4D9F3243C39AA00819640 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */; };
+		20D4D9F5243C39DE00819640 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D9F4243C39DE00819640 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		20634530243C186800A52945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20634533243C186800A52945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20634535243C186800A52945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
+		20D4D9F4243C39DE00819640 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				20634530243C186800A52945 /* Assets.xcassets */,
 				20634532243C186800A52945 /* LaunchScreen.storyboard */,
 				20634535243C186800A52945 /* Info.plist */,
+				20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */,
+				20D4D9F4243C39DE00819640 /* TabBarViewController.swift */,
 			);
 			path = Mapaya;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			files = (
 				2063452C243C186600A52945 /* ViewController.swift in Sources */,
 				20634528243C186600A52945 /* AppDelegate.swift in Sources */,
+				20D4D9F3243C39AA00819640 /* OnBoardViewController.swift in Sources */,
+				20D4D9F5243C39DE00819640 /* TabBarViewController.swift in Sources */,
 				2063452A243C186600A52945 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
