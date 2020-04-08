@@ -23,6 +23,7 @@
 		7E45DA92243D7E5000A5BA20 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA91243D7E5000A5BA20 /* Filter.swift */; };
 		7E45DA94243D802E00A5BA20 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA93243D802E00A5BA20 /* BookmarkViewController.swift */; };
 		7E45DA97243D815E00A5BA20 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA96243D815E00A5BA20 /* BookmarkTableViewCell.swift */; };
+		8C52F876243E13E60040ADA5 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52F875243E13E60040ADA5 /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7E45DA91243D7E5000A5BA20 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		7E45DA93243D802E00A5BA20 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		7E45DA96243D815E00A5BA20 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		8C52F875243E13E60040ADA5 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				20D4D9F4243C39DE00819640 /* TabBarViewController.swift */,
 				7E45DA93243D802E00A5BA20 /* BookmarkViewController.swift */,
 				20EED711243D7FD600D69CC0 /* HomeViewController.swift */,
+				8C52F875243E13E60040ADA5 /* FilterViewController.swift */,
 			);
 			path = Mapaya;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C52F876243E13E60040ADA5 /* FilterViewController.swift in Sources */,
 				7E45DA94243D802E00A5BA20 /* BookmarkViewController.swift in Sources */,
 				2063452C243C186600A52945 /* ViewController.swift in Sources */,
 				7E45DA92243D7E5000A5BA20 /* Filter.swift in Sources */,
