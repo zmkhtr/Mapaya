@@ -15,6 +15,13 @@
 		20634534243C186800A52945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20634532243C186800A52945 /* LaunchScreen.storyboard */; };
 		20D4D9F3243C39AA00819640 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */; };
 		20D4D9F5243C39DE00819640 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D9F4243C39DE00819640 /* TabBarViewController.swift */; };
+		7E45DA89243D7D4000A5BA20 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA88243D7D4000A5BA20 /* Recipe.swift */; };
+		7E45DA8C243D7D9B00A5BA20 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA8B243D7D9B00A5BA20 /* RecipeDetail.swift */; };
+		7E45DA8E243D7DB500A5BA20 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA8D243D7DB500A5BA20 /* Ingredient.swift */; };
+		7E45DA90243D7DBE00A5BA20 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA8F243D7DBE00A5BA20 /* Step.swift */; };
+		7E45DA92243D7E5000A5BA20 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA91243D7E5000A5BA20 /* Filter.swift */; };
+		7E45DA94243D802E00A5BA20 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA93243D802E00A5BA20 /* BookmarkViewController.swift */; };
+		7E45DA97243D815E00A5BA20 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA96243D815E00A5BA20 /* BookmarkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		20634535243C186800A52945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
 		20D4D9F4243C39DE00819640 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7E45DA88243D7D4000A5BA20 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		7E45DA8B243D7D9B00A5BA20 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
+		7E45DA8D243D7DB500A5BA20 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		7E45DA8F243D7DBE00A5BA20 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		7E45DA91243D7E5000A5BA20 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		7E45DA93243D802E00A5BA20 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		7E45DA96243D815E00A5BA20 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,8 @@
 		20634526243C186600A52945 /* Mapaya */ = {
 			isa = PBXGroup;
 			children = (
+				7E45DA95243D814500A5BA20 /* Cell */,
+				7E45DA8A243D7D4900A5BA20 /* Model */,
 				20634527243C186600A52945 /* AppDelegate.swift */,
 				20634529243C186600A52945 /* SceneDelegate.swift */,
 				2063452B243C186600A52945 /* ViewController.swift */,
@@ -69,8 +85,29 @@
 				20634535243C186800A52945 /* Info.plist */,
 				20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */,
 				20D4D9F4243C39DE00819640 /* TabBarViewController.swift */,
+				7E45DA93243D802E00A5BA20 /* BookmarkViewController.swift */,
 			);
 			path = Mapaya;
+			sourceTree = "<group>";
+		};
+		7E45DA8A243D7D4900A5BA20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E45DA88243D7D4000A5BA20 /* Recipe.swift */,
+				7E45DA8B243D7D9B00A5BA20 /* RecipeDetail.swift */,
+				7E45DA8D243D7DB500A5BA20 /* Ingredient.swift */,
+				7E45DA8F243D7DBE00A5BA20 /* Step.swift */,
+				7E45DA91243D7E5000A5BA20 /* Filter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E45DA95243D814500A5BA20 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7E45DA96243D815E00A5BA20 /* BookmarkTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E45DA94243D802E00A5BA20 /* BookmarkViewController.swift in Sources */,
 				2063452C243C186600A52945 /* ViewController.swift in Sources */,
+				7E45DA92243D7E5000A5BA20 /* Filter.swift in Sources */,
+				7E45DA8C243D7D9B00A5BA20 /* RecipeDetail.swift in Sources */,
+				7E45DA90243D7DBE00A5BA20 /* Step.swift in Sources */,
 				20634528243C186600A52945 /* AppDelegate.swift in Sources */,
 				20D4D9F3243C39AA00819640 /* OnBoardViewController.swift in Sources */,
+				7E45DA8E243D7DB500A5BA20 /* Ingredient.swift in Sources */,
+				7E45DA89243D7D4000A5BA20 /* Recipe.swift in Sources */,
 				20D4D9F5243C39DE00819640 /* TabBarViewController.swift in Sources */,
 				2063452A243C186600A52945 /* SceneDelegate.swift in Sources */,
+				7E45DA97243D815E00A5BA20 /* BookmarkTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
