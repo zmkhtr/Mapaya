@@ -15,6 +15,7 @@
 		20634534243C186800A52945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20634532243C186800A52945 /* LaunchScreen.storyboard */; };
 		20D4D9F3243C39AA00819640 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */; };
 		20D4D9F5243C39DE00819640 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D9F4243C39DE00819640 /* TabBarViewController.swift */; };
+		20EED712243D7FD600D69CC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EED711243D7FD600D69CC0 /* HomeViewController.swift */; };
 		7E45DA89243D7D4000A5BA20 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA88243D7D4000A5BA20 /* Recipe.swift */; };
 		7E45DA8C243D7D9B00A5BA20 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA8B243D7D9B00A5BA20 /* RecipeDetail.swift */; };
 		7E45DA8E243D7DB500A5BA20 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45DA8D243D7DB500A5BA20 /* Ingredient.swift */; };
@@ -35,6 +36,7 @@
 		20634535243C186800A52945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
 		20D4D9F4243C39DE00819640 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		20EED711243D7FD600D69CC0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E45DA88243D7D4000A5BA20 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		7E45DA8B243D7D9B00A5BA20 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		7E45DA8D243D7DB500A5BA20 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */,
 				20D4D9F4243C39DE00819640 /* TabBarViewController.swift */,
 				7E45DA93243D802E00A5BA20 /* BookmarkViewController.swift */,
+				20EED711243D7FD600D69CC0 /* HomeViewController.swift */,
 			);
 			path = Mapaya;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				20D4D9F5243C39DE00819640 /* TabBarViewController.swift in Sources */,
 				2063452A243C186600A52945 /* SceneDelegate.swift in Sources */,
 				7E45DA97243D815E00A5BA20 /* BookmarkTableViewCell.swift in Sources */,
+				20EED712243D7FD600D69CC0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
