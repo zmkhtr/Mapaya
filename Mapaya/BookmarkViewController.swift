@@ -20,9 +20,9 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
     func initData() {
         recipes = [
-            Recipe(recipeID: 1, name: "Egg Sandwich", image: "egg-sandwich", minuteEstimate: "20", portionEstimate: "2", level: "Easy"),
-            Recipe(recipeID: 2, name: "French Toast", image: "french-toast", minuteEstimate: "30", portionEstimate: "2", level: "Medium"),
-            Recipe(recipeID: 3, name: "Cheese Burger", image: "cheese-burger", minuteEstimate: "60", portionEstimate: "2", level: "Hard")
+            Recipe(recipeID: 1, name: "Egg Sandwich", image: "egg-sandwich", minuteEstimate: "20 minutes", portionEstimate: "2 people", level: "Easy"),
+            Recipe(recipeID: 2, name: "French Toast", image: "french-toast", minuteEstimate: "30 minutes", portionEstimate: "2 people", level: "Medium"),
+            Recipe(recipeID: 3, name: "Cheese Burger", image: "cheese-burger", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard")
         ]
     }
     
@@ -38,14 +38,39 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         if let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as? BookmarkTableViewCell {
             let recipe = recipes[indexPath.row]
             cell.nameLabel.text = recipe.name
-            cell.timeLabel.text = "\(recipe.minuteEstimate) minutes"
-            cell.peopleLabel.text = "\(recipe.portionEstimate) people"
+            cell.timeLabel.text = recipe.minuteEstimate
+            cell.peopleLabel.text = recipe.portionEstimate
             cell.recipeImage.image = UIImage(named: recipe.image)
+            cell.levelLabel.text = recipe.level
+            cell.levelView.backgroundColor = checkColor(level: recipe.level.lowercased())
             return cell
         }
         return BookmarkTableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let recipe = recipes[indexPath.row]
+        performSegue(withIdentifier: "toDetailPage", sender: recipe)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailPage {
+            destination.recipe = sender as? Recipe
+        }
+    }
+    
+    func checkColor(level: String) -> UIColor {
+        switch level {
+        case "easy":
+            return #colorLiteral(red: 0.3529411765, green: 0.4823529412, blue: 0.4117647059, alpha: 1)
+        case "medium":
+            return #colorLiteral(red: 0.9019607843, green: 0.6784313725, blue: 0.3137254902, alpha: 1)
+        case "hard":
+            return #colorLiteral(red: 0.8509803922, green: 0.2274509804, blue: 0.1098039216, alpha: 1)
+        default:
+            return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
 
     /*
     // MARK: - Navigation
