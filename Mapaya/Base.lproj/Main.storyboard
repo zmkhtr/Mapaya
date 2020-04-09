@@ -79,27 +79,33 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you like spicy food?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVw-UB-SO1">
-                                <rect key="frame" x="87" y="312" width="240" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Questions 1" translatesAutoresizingMaskIntoConstraints="NO" id="P1D-fe-3ca">
-                                <rect key="frame" x="87" y="176" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRG-lH-7xx">
                                 <rect key="frame" x="213" y="412" width="201" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Yes" image="Preference Yes"/>
+                                <connections>
+                                    <action selector="yesButton:" destination="51I-hM-AUr" eventType="touchUpInside" id="zbP-1f-OyO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yc-rw-O6p">
                                 <rect key="frame" x="42" y="412" width="196" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="No" image="Preference No"/>
+                                <connections>
+                                    <action selector="noButton:" destination="51I-hM-AUr" eventType="touchUpInside" id="MBa-zn-RJk"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="questions-1" translatesAutoresizingMaskIntoConstraints="NO" id="gPh-49-udS">
+                                <rect key="frame" x="75" y="170" width="264" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you like spicy food?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVw-UB-SO1">
+                                <rect key="frame" x="45" y="306" width="324" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="etA-t9-qPg"/>
@@ -116,6 +122,10 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="preferenceIndicator" destination="gPh-49-udS" id="eAm-Ws-UHf"/>
+                        <outlet property="preferenceQuestion" destination="yVw-UB-SO1" id="bXT-tq-SIA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nL3-qO-8jf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -641,12 +651,11 @@ allows you to choose your recipe based on your ingredients and preferences.</str
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Preference No" width="172" height="172"/>
-        <image name="Preference Yes" width="172" height="172"/>
-        <image name="Questions 1" width="544" height="100"/>
         <image name="Easy" width="112" height="34"/>
         <image name="Image" width="960" height="960"/>
         <image name="Path 2" width="375" height="70"/>
+        <image name="Preference No" width="172" height="172"/>
+        <image name="Preference Yes" width="172" height="172"/>
         <image name="Screen Shot 2020-04-08 at 16.05.44" width="470" height="6"/>
         <image name="bookmark" width="256" height="256"/>
         <image name="bookmark.fill" width="14" height="18"/>
@@ -654,6 +663,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
         <image name="clock" width="17" height="17"/>
         <image name="daging" width="31" height="36"/>
         <image name="person.fill" width="14" height="15"/>
+        <image name="questions-1" width="554" height="98"/>
         <image name="sandwich" width="500" height="500"/>
     </resources>
 </document>

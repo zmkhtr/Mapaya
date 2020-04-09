@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Questions 1.pdf",
+      "filename" : "Chili aja.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Questions 1@2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Questions 1@3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }
