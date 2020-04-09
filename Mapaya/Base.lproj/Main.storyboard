@@ -272,10 +272,6 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Easy" translatesAutoresizingMaskIntoConstraints="NO" id="zWQ-Hd-dDY">
-                                <rect key="frame" x="304" y="418" width="71" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="0HW-7h-jdh">
                                 <rect key="frame" x="36" y="481" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -286,15 +282,31 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNt-Tk-Jsn">
+                                <rect key="frame" x="338" y="424" width="56" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzz-Fa-mL2">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.49803921569999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Vr-8U-6yO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hFW-6b-WJl"/>
                     <connections>
                         <outlet property="detailFoodName" destination="Zn6-lJ-qbo" id="IlQ-YW-Qti"/>
                         <outlet property="detailImage" destination="pMK-q5-UVS" id="WeU-Gp-U59"/>
                         <outlet property="detailIngredients" destination="iD8-8x-dXN" id="6TO-28-k57"/>
-                        <outlet property="detailLevel" destination="zWQ-Hd-dDY" id="usT-aF-EfG"/>
+                        <outlet property="detailLevelLabel" destination="Vzz-Fa-mL2" id="RIx-lm-w64"/>
+                        <outlet property="detailLevelView" destination="kNt-Tk-Jsn" id="Odd-d2-Qcl"/>
                         <outlet property="detailMinutes" destination="dG5-3i-0uP" id="Qqu-3K-1Re"/>
                         <outlet property="detailPerson" destination="Lib-ZX-gpU" id="OMZ-pc-8tS"/>
                         <outlet property="detailSteps" destination="J2Z-df-oT9" id="oSA-HF-nRX"/>
@@ -302,7 +314,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFu-q0-UAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1878.2608695652175" y="-732.58928571428567"/>
+            <point key="canvasLocation" x="3389.8550724637685" y="-508.25892857142856"/>
         </scene>
         <!--Bookmark View Controller-->
         <scene sceneID="WmB-Ot-nr1">
@@ -359,9 +371,25 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VaW-Ux-scp">
+                                                    <rect key="frame" x="323" y="106" width="56" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="873-WL-CHm">
+                                                            <rect key="frame" x="0.0" y="0.0" width="56" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="levelLabel" destination="873-WL-CHm" id="nbQ-hJ-LTa"/>
+                                            <outlet property="levelView" destination="VaW-Ux-scp" id="Awu-3m-gqL"/>
                                             <outlet property="nameLabel" destination="tsk-Gc-6UK" id="IHv-rU-hhz"/>
                                             <outlet property="peopleLabel" destination="1MO-dL-Nsd" id="8nP-Z6-AdF"/>
                                             <outlet property="recipeImage" destination="I2y-0O-iZs" id="vNp-P4-7T8"/>
@@ -379,10 +407,13 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                         <viewLayoutGuide key="safeArea" id="DAe-xG-jMv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bookmark.fill" id="nJm-gw-p7S"/>
+                    <connections>
+                        <segue destination="Olz-MV-vjs" kind="show" identifier="toDetailPage" id="Ffc-Cq-P2S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB0-TE-uAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2634.7826086956525" y="-352.23214285714283"/>
+            <point key="canvasLocation" x="2653.6231884057975" y="-508.25892857142856"/>
         </scene>
         <!--Item-->
         <scene sceneID="urY-nn-H3t">
@@ -641,12 +672,11 @@ allows you to choose your recipe based on your ingredients and preferences.</str
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="Image" width="960" height="960"/>
+        <image name="Path 2" width="375" height="70"/>
         <image name="Preference No" width="172" height="172"/>
         <image name="Preference Yes" width="172" height="172"/>
         <image name="Questions 1" width="544" height="100"/>
-        <image name="Easy" width="112" height="34"/>
-        <image name="Image" width="960" height="960"/>
-        <image name="Path 2" width="375" height="70"/>
         <image name="Screen Shot 2020-04-08 at 16.05.44" width="470" height="6"/>
         <image name="bookmark" width="256" height="256"/>
         <image name="bookmark.fill" width="14" height="18"/>
