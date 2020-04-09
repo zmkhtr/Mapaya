@@ -15,13 +15,14 @@ class BookmarkTableViewCell: UITableViewCell {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var peopleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var levelView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        initImageViewGradient()
+        initView()
     }
     
-    func initImageViewGradient() {
+    func initView() {
         // Add corner radius
         recipeImage.layer.cornerRadius = 25
         
@@ -32,6 +33,11 @@ class BookmarkTableViewCell: UITableViewCell {
         let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
         gradient.colors = [startColor, endColor]
         recipeImage.layer.insertSublayer(gradient, at: 0)
+        
+        // make view for label rounded
+        levelView.layer.cornerRadius = 8
+        // change the font color of level
+        levelLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
