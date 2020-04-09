@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XLB-f2-1Ym">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aVM-Nz-19D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -415,22 +415,6 @@ allows you to choose your recipe based on your ingredients and preferences.</str
             </objects>
             <point key="canvasLocation" x="2653.6231884057975" y="-508.25892857142856"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="urY-nn-H3t">
-            <objects>
-                <viewController id="m6f-jo-ru9" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pX4-Wm-eUX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="BCw-B1-ZGC"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="lPH-p1-rpO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6ff-cf-n86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3391" y="138"/>
-        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="nyi-BN-Ebe">
             <objects>
@@ -444,7 +428,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                     <connections>
                         <segue destination="6Hy-o8-gA6" kind="relationship" relationship="viewControllers" id="uin-Q0-p7z"/>
                         <segue destination="oQt-SA-toP" kind="relationship" relationship="viewControllers" id="Umv-xx-fgE"/>
-                        <segue destination="m6f-jo-ru9" kind="relationship" relationship="viewControllers" id="J0E-2b-4o9"/>
+                        <segue destination="XLB-f2-1Ym" kind="relationship" relationship="viewControllers" id="nIL-1Y-X6d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ox-Yw-xtq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -469,7 +453,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
             </objects>
             <point key="canvasLocation" x="-581" y="138"/>
         </scene>
-        <!--Filter View Controller-->
+        <!--Item-->
         <scene sceneID="Kqr-00-5Xa">
             <objects>
                 <viewController id="XLB-f2-1Ym" customClass="FilterViewController" customModule="Mapaya" customModuleProvider="target" sceneMemberID="viewController">
@@ -695,6 +679,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uyu-4h-30S"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cjS-3P-T4P"/>
                     <connections>
                         <outlet property="DairyButtonOutlet" destination="dGZ-Wh-Ipy" id="9ET-5Z-1SB"/>
                         <outlet property="DairyLabelOutlet" destination="kHi-ab-Sm2" id="QxN-iq-AO8"/>
@@ -706,12 +691,11 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTJ-9M-olB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1462.3188405797102" y="129.91071428571428"/>
+            <point key="canvasLocation" x="3390" y="142"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Easy" width="112" height="34"/>
         <image name="Image" width="960" height="960"/>
         <image name="Path 2" width="375" height="70"/>
         <image name="Preference No" width="172" height="172"/>
