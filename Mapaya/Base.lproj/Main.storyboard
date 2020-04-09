@@ -582,23 +582,17 @@
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-<<<<<<< HEAD
         <image name="Image" width="960" height="960"/>
         <image name="Screen Shot 2020-04-08 at 16.05.44" width="470" height="6"/>
-=======
         <image name="Easy" width="112" height="34"/>
         <image name="Image" width="960" height="960"/>
         <image name="Path 2" width="375" height="70"/>
->>>>>>> dev-davia
         <image name="bookmark" width="256" height="256"/>
         <image name="bookmark.fill" width="14" height="18"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="clock" width="17" height="17"/>
         <image name="daging" width="31" height="36"/>
         <image name="person.fill" width="14" height="15"/>
-<<<<<<< HEAD
-=======
         <image name="sandwich" width="500" height="500"/>
->>>>>>> dev-davia
     </resources>
 </document>
