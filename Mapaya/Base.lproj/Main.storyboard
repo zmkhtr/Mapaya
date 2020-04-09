@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aVM-Nz-19D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XLB-f2-1Ym">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -557,6 +557,9 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="VegetableButton:" destination="XLB-f2-1Ym" eventType="touchUpInside" id="ZOi-Cz-f0G"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="daging" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-CF-Bcq">
                                 <rect key="frame" x="185" y="474" width="44" height="53"/>
@@ -629,24 +632,60 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyk-BT-wDa">
+                                <rect key="frame" x="20" y="578" width="374" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za3-09-C3c">
+                                        <rect key="frame" x="8" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI9-Uo-Gg5">
+                                        <rect key="frame" x="8" y="35" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfI-FN-07w">
+                                        <rect key="frame" x="8" y="64" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uyu-4h-30S"/>
                     </view>
+                    <connections>
+                        <outlet property="DairyButtonOutlet" destination="dGZ-Wh-Ipy" id="9ET-5Z-1SB"/>
+                        <outlet property="DairyLabelOutlet" destination="kHi-ab-Sm2" id="QxN-iq-AO8"/>
+                        <outlet property="DairyLogoOutlet" destination="a8h-qa-Tn1" id="4XG-yg-oOt"/>
+                        <outlet property="DropDown" destination="zyk-BT-wDa" id="32P-Ud-C6o"/>
+                        <outlet property="MeatButtonOutlet" destination="zKj-in-5gw" id="p8X-c1-jJx"/>
+                        <outlet property="VegetableButtonOutlet" destination="wX1-33-Jqt" id="wUa-fx-jvO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTJ-9M-olB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1461" y="130"/>
+            <point key="canvasLocation" x="-1462.3188405797102" y="129.91071428571428"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Preference No" width="172" height="172"/>
-        <image name="Preference Yes" width="172" height="172"/>
-        <image name="Questions 1" width="544" height="100"/>
         <image name="Easy" width="112" height="34"/>
         <image name="Image" width="960" height="960"/>
         <image name="Path 2" width="375" height="70"/>
+        <image name="Preference No" width="172" height="172"/>
+        <image name="Preference Yes" width="172" height="172"/>
+        <image name="Questions 1" width="544" height="100"/>
         <image name="Screen Shot 2020-04-08 at 16.05.44" width="470" height="6"/>
         <image name="bookmark" width="256" height="256"/>
         <image name="bookmark.fill" width="14" height="18"/>
