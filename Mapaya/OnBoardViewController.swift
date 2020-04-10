@@ -33,15 +33,17 @@ class OnBoardViewController: UIViewController {
         temp+=1
         if(temp == 1) {
             hasil+=0
-        } else if(temp == 2) {
-            hasil+=0
-        } else if(temp == 3) {
-            hasil+=0
-            performSegue(withIdentifier: "toHomePage", sender: self)
-        } else {
             preferenceQuestion.text = listQuestions[temp]
             let question: String = "questions"
             preferenceIndicator.image =  UIImage(named: "\(question)-\(temp+1)")
+        } else if(temp == 2) {
+            hasil+=0
+            preferenceQuestion.text = listQuestions[temp]
+            let question: String = "questions"
+            preferenceIndicator.image =  UIImage(named: "\(question)-\(temp+1)")
+        } else if(temp == 3) {
+            hasil+=0
+            performSegue(withIdentifier: "toHomePage", sender: self)
         }
     }
     
@@ -49,17 +51,18 @@ class OnBoardViewController: UIViewController {
        temp+=1
         if(temp == 1) {
             hasil+=spicy
-        } else if(temp == 2) {
-            hasil+=vege
-        } else if(temp == 3) {
-            hasil+=vege
-            performSegue(withIdentifier: "toHomePage", sender: self)
-        } else {
             preferenceQuestion.text = listQuestions[temp]
             let question: String = "questions"
             preferenceIndicator.image =  UIImage(named: "\(question)-\(temp+1)")
+        } else if(temp == 2) {
+            hasil+=vege
+            preferenceQuestion.text = listQuestions[temp]
+            let question: String = "questions"
+            preferenceIndicator.image =  UIImage(named: "\(question)-\(temp+1)")
+        } else if(temp == 3) {
+            hasil+=vege
+            performSegue(withIdentifier: "toHomePage", sender: self)
         }
-        
     }
     
     
