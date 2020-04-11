@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         startButton.layer.cornerRadius = 20
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     @IBOutlet weak var startButton: UIButton!
