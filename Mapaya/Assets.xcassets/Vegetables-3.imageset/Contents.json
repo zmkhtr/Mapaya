@@ -1,0 +1,41 @@
+{
+  "images" : [
+    {
+      "filename" : "Vegetables.pdf",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Vegetables@2x.pdf",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Vegetables@3x.pdf",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "Vegetables.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Vegetables@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Vegetables@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x",
+      "unassigned" : true
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

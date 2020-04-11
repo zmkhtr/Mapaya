@@ -6,10 +6,18 @@
       "scale" : "1x"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Chili aja@2x.pdf",
+>>>>>>> a9dd399997fd82ecf5a512a0f5f4d6358607ec26
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Chili aja@3x.pdf",
+>>>>>>> a9dd399997fd82ecf5a512a0f5f4d6358607ec26
       "idiom" : "universal",
       "scale" : "3x"
     }
