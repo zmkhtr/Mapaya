@@ -1,3 +1,5 @@
 .DS_Store
 xcuserdata/*
 /xcuserdata
+/xcuserdata/*
+Mapaya.xcodeproj/project.xcworkspace/xcuserdata/*
