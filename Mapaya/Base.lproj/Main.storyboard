@@ -111,6 +111,9 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skipButton:" destination="51I-hM-AUr" eventType="touchUpInside" id="VsV-Hg-YW3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -218,7 +221,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
             <objects>
                 <viewController id="Olz-MV-vjs" customClass="DetailPage" customModule="Mapaya" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NIh-Ts-AAT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sandwich" translatesAutoresizingMaskIntoConstraints="NO" id="pMK-q5-UVS">
@@ -655,11 +658,6 @@ allows you to choose your recipe based on your ingredients and preferences.</str
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Easy" width="112" height="34"/>
-        <image name="Image" width="960" height="960"/>
-        <image name="Path 2" width="375" height="70"/>
-        <image name="Preference No" width="172" height="172"/>
-        <image name="Preference Yes" width="172" height="172"/>
         <image name="Dairy" width="264" height="264"/>
         <image name="Fruits" width="264" height="264"/>
         <image name="Group 8" width="264" height="264"/>
@@ -668,7 +666,6 @@ allows you to choose your recipe based on your ingredients and preferences.</str
         <image name="Path 2" width="375" height="70"/>
         <image name="Preference No" width="172" height="172"/>
         <image name="Preference Yes" width="172" height="172"/>
-        <image name="Questions 1" width="544" height="100"/>
         <image name="Screen Shot 2020-04-08 at 16.05.44" width="470" height="6"/>
         <image name="Seafood" width="264" height="264"/>
         <image name="Vegetables-2" width="264" height="264"/>

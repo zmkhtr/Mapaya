@@ -64,7 +64,9 @@ class OnBoardViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func skipButton(_ sender: Any) {
+        performSegue(withIdentifier: "toHomePage", sender: self)
+    }
     
     /*
      // MARK: - Navigation
