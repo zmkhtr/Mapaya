@@ -129,7 +129,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
             </objects>
             <point key="canvasLocation" x="1034.7826086956522" y="137.94642857142856"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="6f2-9b-ePu">
             <objects>
                 <viewController id="oQt-SA-toP" customClass="HomeViewController" customModule="Mapaya" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,31 +146,34 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-Pg-tsH">
-                                        <rect key="frame" x="8" y="584" width="67" height="21"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" translatesAutoresizingMaskIntoConstraints="NO" id="C9J-dT-34Y">
+                                        <rect key="frame" x="9" y="580" width="16" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="WHa-6h-vAz">
+                                        <rect key="frame" x="8" y="604" width="16" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-Pg-tsH">
+                                        <rect key="frame" x="33" y="578" width="53" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9Q-RA-mqx">
-                                        <rect key="frame" x="8" y="613" width="86" height="21"/>
+                                        <rect key="frame" x="33" y="602" width="68" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mie Ayam Naruto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRX-xD-UkX">
-                                        <rect key="frame" x="8" y="642" width="223" height="34"/>
+                                        <rect key="frame" x="9" y="624" width="223" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="936-GY-bEc">
-                                        <rect key="frame" x="8" y="555" width="36" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -178,6 +181,25 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                         <rect key="frame" x="59" y="214" width="256" height="256"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-ml-MHo">
+                                        <rect key="frame" x="9" y="555" width="56" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-ns-kCY">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -190,21 +212,32 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                     <outletCollection property="gestureRecognizers" destination="nbn-XB-dSs" appends="YES" id="5RC-9L-LLw"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iA-DJ-wgi">
-                                <rect key="frame" x="184" y="88" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vig-1D-tXy">
+                                <rect key="frame" x="20" y="60" width="26" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RESET"/>
-                                <connections>
-                                    <action selector="reset:" destination="oQt-SA-toP" eventType="touchUpInside" id="QcP-tZ-26K"/>
-                                </connections>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="gear" catalog="system"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mapaya" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPy-iX-SUy">
+                                <rect key="frame" x="125" y="26" width="164" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="42"/>
+                                <color key="textColor" red="0.92941176470588238" green="0.53725490196078429" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sd1-Cd-Yd4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="O3L-w0-TMw"/>
+                    <tabBarItem key="tabBarItem" title="" image="Home Button off" id="O3L-w0-TMw"/>
                     <connections>
                         <outlet property="cardView" destination="0kg-kg-plE" id="GAx-q9-i0r"/>
+                        <outlet property="imageFood" destination="Qkg-a5-Tzk" id="4BF-rU-wGE"/>
+                        <outlet property="labelDifficulty" destination="nBr-ns-kCY" id="how-Ar-Eag"/>
+                        <outlet property="labelDifficultyBackground" destination="xQb-ml-MHo" id="SUu-qt-Dbx"/>
+                        <outlet property="labelName" destination="kRX-xD-UkX" id="U1A-7j-HlJ"/>
+                        <outlet property="labelPerson" destination="3pF-Pg-tsH" id="10u-LS-BIA"/>
+                        <outlet property="labelTime" destination="z9Q-RA-mqx" id="u9g-G3-VqL"/>
                         <outlet property="thumbImageView" destination="y5b-jG-fuM" id="0Hx-Sv-8a0"/>
                     </connections>
                 </viewController>
@@ -461,7 +494,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
             </objects>
             <point key="canvasLocation" x="-581" y="138"/>
         </scene>
-        <!--Item-->
+        <!--Filter View Controller-->
         <scene sceneID="Kqr-00-5Xa">
             <objects>
                 <viewController id="XLB-f2-1Ym" customClass="FilterViewController" customModule="Mapaya" customModuleProvider="target" sceneMemberID="viewController">
@@ -680,7 +713,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uyu-4h-30S"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cjS-3P-T4P"/>
+                    <tabBarItem key="tabBarItem" title="" image="Filter" id="cjS-3P-T4P"/>
                     <connections>
                         <outlet property="DairyButtonOutlet" destination="dGZ-Wh-Ipy" id="9ET-5Z-1SB"/>
                         <outlet property="DropDown" destination="cDJ-Bj-qic" id="PNW-kT-rHV"/>
@@ -701,8 +734,10 @@ allows you to choose your recipe based on your ingredients and preferences.</str
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Dairy" width="264" height="264"/>
+        <image name="Filter" width="36" height="44"/>
         <image name="Fruits" width="264" height="264"/>
         <image name="Group 8" width="264" height="264"/>
+        <image name="Home Button off" width="32" height="60"/>
         <image name="Image" width="960" height="960"/>
         <image name="Meat" width="264" height="264"/>
         <image name="Path 2" width="375" height="70"/>
@@ -715,6 +750,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
         <image name="bookmark.fill" width="14" height="18"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="clock" width="17" height="17"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="person.fill" width="14" height="15"/>
         <image name="questions-1" width="554" height="98"/>
         <image name="sandwich" width="500" height="500"/>

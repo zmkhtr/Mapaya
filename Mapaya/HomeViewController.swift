@@ -14,11 +14,42 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var thumbImageView: UIImageView!
     var divisor : CGFloat!
     
+    var recipes: [Recipe] = []
+    var singleRecipe : Recipe?
+    
+    @IBOutlet weak var labelDifficulty: UILabel!
+    
+    @IBOutlet weak var labelDifficultyBackground: UIView!
+    
+    @IBOutlet weak var labelPerson: UILabel!
+    
+    @IBOutlet weak var labelTime: UILabel!
+    
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var imageFood: UIImageView!
+    
+    func initData() {
+        recipes = [
+            Recipe(recipeID: 1, name: "Egg Sandwich", image: "egg-sandwich", minuteEstimate: "20 minutes", portionEstimate: "2 people", level: "Easy"),
+            Recipe(recipeID: 2, name: "French Toast", image: "french-toast", minuteEstimate: "30 minutes", portionEstimate: "2 people", level: "Medium"),
+            Recipe(recipeID: 3, name: "Cheese Burger", image: "cheese-burger", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard"),
+            Recipe(recipeID: 4, name: "Egg Sandwich", image: "egg-sandwich", minuteEstimate: "20 minutes", portionEstimate: "2 people", level: "Easy"),
+            Recipe(recipeID: 5, name: "French Toast", image: "french-toast", minuteEstimate: "30 minutes", portionEstimate: "2 people", level: "Medium"),
+            Recipe(recipeID: 6, name: "Cheese Burger", image: "cheese-burger", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard")
+            
+        ]
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initData()
         
         divisor = (view.frame.width / 2) / 0.61
+        //        MiniDatabase.saveUserBookmark(bookmark: Bookmark(recipe: recipes))
+        //        saveToBookmark(recipes: recipes[1])
         // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
@@ -32,50 +63,87 @@ class HomeViewController: UIViewController {
         card.transform = CGAffineTransform(rotationAngle: xFromCenter/divisor).scaledBy(x: scale, y: scale)
         
         if xFromCenter > 0 {
-            thumbImageView.image = #imageLiteral(resourceName: "bookmark")
-            thumbImageView.tintColor = UIColor.blue
+            thumbImageView.image = #imageLiteral(resourceName: "bookmark-button")
+            //            thumbImageView.tintColor = UIColor.blue
         } else {
-            thumbImageView.image = #imageLiteral(resourceName: "dislike")
-            thumbImageView.tintColor = UIColor.red
+            thumbImageView.image = #imageLiteral(resourceName: "dislike-button")
+            //            thumbImageView.tintColor = UIColor.red
         }
         
         thumbImageView.alpha = abs(xFromCenter) / view.center.x
         
         if sender.state == UIGestureRecognizer.State.ended {
             
+            //            if card.alpha == 0 {
+            //                resetCard()
+            //            }
             if card.center.x < 75 {
                 //Move to left
                 UIView.animate(withDuration: 0.3) {
                     card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
                     card.alpha = 0
+                    self.resetCard()
                 }
-                return
             } else if card.center.x > (view.frame.width - 75){
                 //Move to right
                 UIView.animate(withDuration: 0.3) {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0
+                    self.resetCard()
                 }
-                return
             }
             
             UIView.animate(withDuration: 0.2) {
+                //                self.cardView.center = self.view.center
                 card.center = self.view.center
                 self.thumbImageView.alpha = 0
             }
         }
+        
+        
     }
     
-    @IBAction func reset(_ sender: UIButton) {
-        resetCard()
-    }
+    //    func saveToBookmark(recipes : Recipe){
+    //        let currentBookmark = MiniDatabase.getUserBookmark()! as Bookmark
+    //        let addedBookmark = Bookmark(recipe: [currentBookmark.recipe])
+    //        MiniDatabase.saveUserBookmark(bookmark: newBookmark)
+    //        print(" APA NIH \(MiniDatabase.getUserBookmark()?.recipe[0].name)")
+    //    }
     
     func resetCard(){
         UIView.animate(withDuration: 0.2) {
-            self.cardView.center = self.view.center
             self.thumbImageView.alpha = 0
-            self.cardView.alpha = 1
-            self.cardView.transform = .identity
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Change `2.0` to the desired number of seconds.
+                self.cardView.center = self.view.center
+                self.cardView.alpha = 1
+                self.setData()
+                self.cardView.transform = .identity
+            }
+        }
+    }
+    
+    func setData(){
+        let randomNumber = Int.random(in: 0...self.recipes.capacity-1)
+        self.imageFood.image = UIImage(named: self.recipes[randomNumber].image)
+        //        self.cardView.alpha = 1
+        self.labelName.text = self.recipes[randomNumber].name
+        self.labelTime.text = self.recipes[randomNumber].minuteEstimate
+        self.labelPerson.text = self.recipes[randomNumber].portionEstimate
+        self.labelDifficulty.text = self.recipes[randomNumber].level
+        self.labelDifficultyBackground.backgroundColor = checkColor(level: self.recipes[randomNumber].level)
+    }
+    
+    
+    func checkColor(level: String) -> UIColor {
+        switch level {
+        case "easy":
+            return #colorLiteral(red: 0.3529411765, green: 0.4823529412, blue: 0.4117647059, alpha: 1)
+        case "medium":
+            return #colorLiteral(red: 0.9019607843, green: 0.6784313725, blue: 0.3137254902, alpha: 1)
+        case "hard":
+            return #colorLiteral(red: 0.8509803922, green: 0.2274509804, blue: 0.1098039216, alpha: 1)
+        default:
+            return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
     }
     /*

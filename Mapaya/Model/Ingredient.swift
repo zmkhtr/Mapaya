@@ -8,9 +8,7 @@
 
 import Foundation
 
-struct Ingredient {
-    let ingredientID: Int
-    let recipeID: Int
+struct Ingredient : Codable {
     let number: Int
     let name: String
 }
