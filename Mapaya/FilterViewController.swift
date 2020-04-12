@@ -44,9 +44,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         IngredientsArray.removeAll()
         DropDown.isHidden = true
         DropDown2.isHidden = true
-        
-        LabelView.text = "No Item Yet"
-        
+                
         // Do any additional setup after loading the view.
     }
     
@@ -89,7 +87,9 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             LabelView.text = "Tap Item to Cancel"
         }
         else if collectionView == IngredientsView{
-            if indexPath.item == IngredientsArray.count {
+            if IngredientsArray.count == 1 {
+                IngredientsArray.remove(at: 0)
+                IngredientsView.reloadData()
                 LabelView.text = "No Item Yet"
             }
             else{
