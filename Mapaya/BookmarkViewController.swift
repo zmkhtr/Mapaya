@@ -19,11 +19,13 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func initData() {
-        recipes = [
-            Recipe(recipeID: 1, name: "Egg Sandwich", image: "egg-sandwich", minuteEstimate: "20 minutes", portionEstimate: "2 people", level: "Easy"),
-            Recipe(recipeID: 2, name: "French Toast", image: "french-toast", minuteEstimate: "30 minutes", portionEstimate: "2 people", level: "Medium"),
-            Recipe(recipeID: 3, name: "Cheese Burger", image: "cheese-burger", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard")
-        ]
+        if let bookmark = MiniDatabase.getUserBookmark() {
+            for recipe in bookmark.recipe {
+                if recipe.recipeID != -1 {
+                    recipes.append(recipe)
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
