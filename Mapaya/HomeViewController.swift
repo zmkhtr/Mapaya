@@ -134,7 +134,7 @@ class HomeViewController: UIViewController {
 //
 //        print("SAVED gg \(recipesFromBookmark.capacity)")
         recipesSave.append(recipes!)
-        print("SAVED \(recipesSave.capacity)")
+        
         let newBookmark = Bookmark(recipe: recipesSave)
         MiniDatabase.saveUserBookmark(bookmark: newBookmark)
         recipesFromBookmark.removeAll()

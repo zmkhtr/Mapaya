@@ -18,6 +18,8 @@ class DetailPage: UIViewController {
     @IBOutlet weak var detailSteps: UILabel!
     @IBOutlet weak var detailLevelView: UIView!
     @IBOutlet weak var detailLevelLabel: UILabel!
+    @IBOutlet weak var detailIngredientListLabel: UILabel!
+    @IBOutlet weak var detailStepsListLabel: UILabel!
     
     
     var recipe: Recipe?
@@ -31,15 +33,6 @@ class DetailPage: UIViewController {
     }
     
     func initData() {
-        if let recipe = recipe {
-            detailImage.image = UIImage(named: recipe.image)
-            detailFoodName.text = recipe.name
-            detailMinutes.text = recipe.minuteEstimate
-            detailPerson.text = recipe.portionEstimate
-            detailLevelLabel.text = recipe.level
-            detailLevelView.backgroundColor = checkColor(level: recipe.level.lowercased())
-        }
-        
         ingredients = [
             Ingredient(recipeID: 1, jumlahBahan: "2 pcs", name: "white bread"),
             Ingredient(recipeID: 1, jumlahBahan: "1", name: "egg"),
@@ -124,6 +117,29 @@ class DetailPage: UIViewController {
             Step(recipeID: 7, stepKe: 2, detail: "Mix pork, garlic, egg, 2 tablespoons chives, soy sauce, sesame oil, and ginger in a large bowl until thoroughly combined. Place a dumpling wrapper on a lightly floured work surface and spoon about 1 tablespoon of the filling in the middle. Wet the edge with a little water and crimp together forming small pleats to seal the dumpling. Repeat with remaining dumpling wrappers and filling."),
             Step(recipeID: 7, stepKe: 3, detail: "Heat 1 to 2 tablespoons vegetable oil in a large skillet over medium-high heat. Place 8 to 10 dumplings in the pan and cook until browned, about 2 minutes per side. Pour in 1 cup of water, cover and cook until the dumplings are tender and the pork is cooked through, about 5 minutes. Repeat for remaining dumplings. Serve with soy sauce mixture for dipping.")
         ]
+        
+        if let recipe = recipe {
+            detailImage.image = UIImage(named: recipe.image)
+            detailFoodName.text = recipe.name
+            detailMinutes.text = recipe.minuteEstimate
+            detailPerson.text = recipe.portionEstimate
+            detailLevelLabel.text = recipe.level
+            detailLevelView.backgroundColor = checkColor(level: recipe.level.lowercased())
+            var ingredientList = ""
+            for ingredient in ingredients {
+                if ingredient.recipeID == recipe.recipeID {
+                    ingredientList = ingredientList + "- \(ingredient.name)\n"
+                }
+            }
+            var stepList = ""
+            for step in steps {
+                if step.recipeID == recipe.recipeID {
+                    stepList = stepList + "\(step.stepKe). \(step.detail)\n"
+                }
+            }
+            detailIngredientListLabel.text = ingredientList
+            detailStepsListLabel.text = stepList
+        }
     }
     
     func checkColor(level: String) -> UIColor {

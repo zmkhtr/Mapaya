@@ -25,7 +25,6 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
             for recipe in bookmark.recipe.reversed() {
                 if recipe.recipeID != -1 {
                     recipes.append(recipe)
-                    print(recipe)
                 }
             }
         }
@@ -35,9 +34,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     func onTabSelected(isTheSame: Bool) {
         if (recipes.isEmpty){
             initData()
-            print("FIRST")
         } else {
-            print("SECOND")
             recipes.removeAll()
             initData()
             tabelBookmark.reloadData()
