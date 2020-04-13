@@ -8,25 +8,42 @@
 
 import UIKit
 
-class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate, CustomTabBarControllerDelegate {
+   
 
     var recipes: [Recipe] = []
+    
+    @IBOutlet weak var tabelBookmark: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        initData()
     }
     
     func initData() {
         if let bookmark = MiniDatabase.getUserBookmark() {
-            for recipe in bookmark.recipe {
+            for recipe in bookmark.recipe.reversed() {
                 if recipe.recipeID != -1 {
                     recipes.append(recipe)
+                    print(recipe)
                 }
             }
         }
     }
+    
+    
+    func onTabSelected(isTheSame: Bool) {
+        if (recipes.isEmpty){
+            initData()
+            print("FIRST")
+        } else {
+            print("SECOND")
+            recipes.removeAll()
+            initData()
+            tabelBookmark.reloadData()
+        }
+    }
+       
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 155

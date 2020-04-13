@@ -31,6 +31,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageFood: UIImageView!
     
+    @IBOutlet weak var imageBackground: UIImageView!
+    
+    var rand = 0
+    
     func initData() {
         recipes = [
             Recipe(recipeID: 1, name: "Egg Sandwich", image: "egg-sandwich", minuteEstimate: "20 minutes", portionEstimate: "2 people", level: "Easy"),
@@ -43,7 +47,6 @@ class HomeViewController: UIViewController {
             Recipe(recipeID: 8, name: "Blueberry Pancake", image: "blueberry-pancake", minuteEstimate: "40 minutes", portionEstimate: "4 people", level: "Easy"),
             Recipe(recipeID: 9, name: "Pumpkin Soup", image: "pumpkin-soup", minuteEstimate: "45 minutes", portionEstimate: "2 people", level: "Medium"),
             Recipe(recipeID: 10, name: "Dumplings", image: "dumplings", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard")
-            
         ]
         
     }
@@ -58,6 +61,7 @@ class HomeViewController: UIViewController {
         //        MiniDatabase.saveUserBookmark(bookmark: Bookmark(recipe: recipes))
         //        saveToBookmark(recipes: recipes[1])
         // Do any additional setup after loading the view.
+        cardView.transform = CGAffineTransform(rotationAngle: 0.05)
         
     }
     
@@ -104,7 +108,9 @@ class HomeViewController: UIViewController {
             }
             
             if card.center.y > 50 && card.center.x > 75 && card.center.y < (view.frame.width - 75) {
-                performSegue(withIdentifier: "toDetailSwipeUp", sender: self)
+                self.cardView.center = self.view.center
+                let recipe = self.singleRecipe
+                performSegue(withIdentifier: "toDetailSwipeUp", sender: recipe)
             }
             
             UIView.animate(withDuration: 0.2) {
@@ -122,40 +128,53 @@ class HomeViewController: UIViewController {
         }
     }
     
-        func saveToBookmark(recipes : Recipe?){
-            recipesFromBookmark.append(contentsOf: MiniDatabase.getUserBookmark()?.recipe ?? recipesFromBookmark)
-            
-            if !recipesFromBookmark.isEmpty {
-                recipesSave.append(contentsOf: recipesFromBookmark)
-            }
-            
-            recipesSave.append(recipes!)
-            let newBookmark = Bookmark(recipe: recipesSave)
-            MiniDatabase.saveUserBookmark(bookmark: newBookmark)
-            
-        }
+    func saveToBookmark(recipes : Recipe?){
+        recipesSave.append(contentsOf: MiniDatabase.getUserBookmark()?.recipe ?? recipesFromBookmark)
+//
+//        if !recipesFromBookmark.isEmpty {
+//            recipesSave.append(contentsOf: recipesFromBookmark)
+//        }
+//
+//        print("SAVED gg \(recipesFromBookmark.capacity)")
+        recipesSave.append(recipes!)
+        print("SAVED \(recipesSave.capacity)")
+        let newBookmark = Bookmark(recipe: recipesSave)
+        MiniDatabase.saveUserBookmark(bookmark: newBookmark)
+        recipesFromBookmark.removeAll()
+        recipesSave.removeAll()
+    }
     
     func resetCard(){
         UIView.animate(withDuration: 0.2) {
             self.thumbImageView.alpha = 0
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Change `2.0` to the desired number of seconds.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.cardView.center = self.view.center
                 self.cardView.alpha = 1
                 self.setData()
-                self.cardView.transform = .identity
+//                self.cardView.transform = .identity
+                self.cardView.transform = CGAffineTransform(rotationAngle: 0.05)
             }
         }
     }
     
     func setData(){
-        let randomNumber = Int.random(in: 0...self.recipes.capacity-1)
-        self.singleRecipe = recipes[randomNumber]
-        self.imageFood.image = UIImage(named: self.recipes[randomNumber].image)
-        self.labelName.text = self.recipes[randomNumber].name
-        self.labelTime.text = self.recipes[randomNumber].minuteEstimate
-        self.labelPerson.text = self.recipes[randomNumber].portionEstimate
-        self.labelDifficulty.text = self.recipes[randomNumber].level
-        self.labelDifficultyBackground.backgroundColor = checkColor(level: self.recipes[randomNumber].level.lowercased())
+        rand += 1
+        if (rand == recipes.capacity) {
+            rand = 0
+        }
+        var bg = rand + 1
+        if (rand == recipes.capacity-1){
+            bg = 0
+        }
+//        let randomNumber = Int.random(in: 0...recipes.capacity-1)
+        self.imageBackground.image = UIImage(named: self.recipes[bg].image)
+        self.singleRecipe = recipes[rand]
+        self.imageFood.image = UIImage(named: self.recipes[rand].image)
+        self.labelName.text = self.recipes[rand].name
+        self.labelTime.text = self.recipes[rand].minuteEstimate
+        self.labelPerson.text = self.recipes[rand].portionEstimate
+        self.labelDifficulty.text = self.recipes[rand].level
+        self.labelDifficultyBackground.backgroundColor = checkColor(level: self.recipes[rand].level.lowercased())
     }
     
     
@@ -183,22 +202,22 @@ class HomeViewController: UIViewController {
     
     func addGradientToView(view: UIView)
     {
-            //gradient layer
-            let gradientLayer = CAGradientLayer()
-            
-            //define colors
-            gradientLayer.colors = [UIColor.clear.cgColor,UIColor.black.cgColor]
-            
-            //define locations of colors as NSNumbers in range from 0.0 to 1.0
-            //if locations not provided the colors will spread evenly
-            gradientLayer.locations = [0.7, 1]
-            gradientLayer.opacity = 0.8
-            
-            //define frame
-            gradientLayer.frame = view.bounds
-            
-            //insert the gradient layer to the view layer
-            view.layer.insertSublayer(gradientLayer, at: 0)
+        //gradient layer
+        let gradientLayer = CAGradientLayer()
+        
+        //define colors
+        gradientLayer.colors = [UIColor.clear.cgColor,UIColor.black.cgColor]
+        
+        //define locations of colors as NSNumbers in range from 0.0 to 1.0
+        //if locations not provided the colors will spread evenly
+        gradientLayer.locations = [0.7, 1]
+        gradientLayer.opacity = 0.8
+        
+        //define frame
+        gradientLayer.frame = view.bounds
+        
+        //insert the gradient layer to the view layer
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
 }
