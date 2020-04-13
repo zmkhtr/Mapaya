@@ -459,7 +459,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
         <!--Tab Bar View Controller-->
         <scene sceneID="nyi-BN-Ebe">
             <objects>
-                <tabBarController id="N17-qb-4zo" customClass="TabBarViewController" customModule="Mapaya" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="N17-qb-4zo" customClass="TabBarViewController" customModule="Mapaya" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gQW-2i-9wd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oej-zg-H1x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -479,6 +479,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
         <!--Navigation Controller-->
         <scene sceneID="l3e-f0-Eqd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e15-k7-VMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aVM-Nz-19D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uiv-jb-k71">
@@ -490,9 +491,8 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dgH-7U-jcX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e15-k7-VMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-581" y="138"/>
+            <point key="canvasLocation" x="-658" y="138"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="Kqr-00-5Xa">

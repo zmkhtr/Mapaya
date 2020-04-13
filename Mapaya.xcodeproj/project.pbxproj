@@ -16,6 +16,7 @@
 		2063452F243C186600A52945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063452D243C186600A52945 /* Main.storyboard */; };
 		20634531243C186800A52945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20634530243C186800A52945 /* Assets.xcassets */; };
 		20634534243C186800A52945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20634532243C186800A52945 /* LaunchScreen.storyboard */; };
+		20975DEE24440C4000F9F3B9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20975DED24440C4000F9F3B9 /* NavigationController.swift */; };
 		20D4D9F3243C39AA00819640 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */; };
 		20D4D9F5243C39DE00819640 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D9F4243C39DE00819640 /* TabBarViewController.swift */; };
 		20EED712243D7FD600D69CC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EED711243D7FD600D69CC0 /* HomeViewController.swift */; };
@@ -46,6 +47,7 @@
 		20634530243C186800A52945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20634533243C186800A52945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20634535243C186800A52945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20975DED24440C4000F9F3B9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		20D4D9F2243C39AA00819640 /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
 		20D4D9F4243C39DE00819640 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		20EED711243D7FD600D69CC0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				7E45DA93243D802E00A5BA20 /* BookmarkViewController.swift */,
 				20EED711243D7FD600D69CC0 /* HomeViewController.swift */,
 				8C52F875243E13E60040ADA5 /* FilterViewController.swift */,
+				20975DED24440C4000F9F3B9 /* NavigationController.swift */,
 			);
 			path = Mapaya;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				7E45DA89243D7D4000A5BA20 /* Recipe.swift in Sources */,
 				20D4D9F5243C39DE00819640 /* TabBarViewController.swift in Sources */,
 				8CEEEAEB2442EDDC0085559D /* DropDownCollectionViewCell2.swift in Sources */,
+				20975DEE24440C4000F9F3B9 /* NavigationController.swift in Sources */,
 				2063452A243C186600A52945 /* SceneDelegate.swift in Sources */,
 				8CEEEAE92442EDC40085559D /* DropDownCollectionViewCell.swift in Sources */,
 				7E45DA97243D815E00A5BA20 /* BookmarkTableViewCell.swift in Sources */,
