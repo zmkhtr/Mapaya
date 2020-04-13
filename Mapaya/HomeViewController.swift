@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     var divisor : CGFloat!
     
     var recipes: [Recipe] = []
+    var recipesSave: [Recipe] = []
+    var recipesFromBookmark: [Recipe] = []
     var singleRecipe : Recipe?
     
     @IBOutlet weak var labelDifficulty: UILabel!
@@ -97,6 +99,7 @@ class HomeViewController: UIViewController {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0
                     self.resetCard()
+                    self.saveToBookmark(recipes: self.singleRecipe)
                 }
             }
             
@@ -110,12 +113,18 @@ class HomeViewController: UIViewController {
         
     }
     
-    //    func saveToBookmark(recipes : Recipe){
-    //        let currentBookmark = MiniDatabase.getUserBookmark()! as Bookmark
-    //        let addedBookmark = Bookmark(recipe: [currentBookmark.recipe])
-    //        MiniDatabase.saveUserBookmark(bookmark: newBookmark)
-    //        print(" APA NIH \(MiniDatabase.getUserBookmark()?.recipe[0].name)")
-    //    }
+        func saveToBookmark(recipes : Recipe?){
+            recipesFromBookmark.append(contentsOf: MiniDatabase.getUserBookmark()?.recipe ?? recipesFromBookmark)
+            
+            if !recipesFromBookmark.isEmpty {
+                recipesSave.append(contentsOf: recipesFromBookmark)
+            }
+            
+            recipesSave.append(recipes!)
+            let newBookmark = Bookmark(recipe: recipesSave)
+            MiniDatabase.saveUserBookmark(bookmark: newBookmark)
+            
+        }
     
     func resetCard(){
         UIView.animate(withDuration: 0.2) {
@@ -131,8 +140,8 @@ class HomeViewController: UIViewController {
     
     func setData(){
         let randomNumber = Int.random(in: 0...self.recipes.capacity-1)
+        self.singleRecipe = recipes[randomNumber]
         self.imageFood.image = UIImage(named: self.recipes[randomNumber].image)
-        //        self.cardView.alpha = 1
         self.labelName.text = self.recipes[randomNumber].name
         self.labelTime.text = self.recipes[randomNumber].minuteEstimate
         self.labelPerson.text = self.recipes[randomNumber].portionEstimate
