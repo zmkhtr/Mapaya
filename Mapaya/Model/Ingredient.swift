@@ -9,6 +9,7 @@
 import Foundation
 
 struct Ingredient : Codable {
-    let number: Int
+    let recipeID: Int
+    let jumlahBahan: String
     let name: String
 }

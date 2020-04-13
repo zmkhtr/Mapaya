@@ -40,13 +40,10 @@ class HomeViewController: UIViewController {
             Recipe(recipeID: 1, name: "Egg Sandwich", image: "egg-sandwich", minuteEstimate: "20 minutes", portionEstimate: "2 people", level: "Easy"),
             Recipe(recipeID: 2, name: "French Toast", image: "french-toast", minuteEstimate: "30 minutes", portionEstimate: "2 people", level: "Easy"),
             Recipe(recipeID: 3, name: "Cheese Burger", image: "cheese-burger", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard"),
-            Recipe(recipeID: 4, name: "Egg Sandwich", image: "egg-sandwich", minuteEstimate: "20 minutes", portionEstimate: "2 people", level: "Easy"),
-            Recipe(recipeID: 5, name: "French Toast", image: "french-toast", minuteEstimate: "30 minutes", portionEstimate: "2 people", level: "Medium"),
-            Recipe(recipeID: 6, name: "Cheese Burger", image: "cheese-burger", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard"),
-            Recipe(recipeID: 7, name: "Pizza", image: "pizza", minuteEstimate: "60 minutes", portionEstimate: "4 people", level: "Hard"),
-            Recipe(recipeID: 8, name: "Blueberry Pancake", image: "blueberry-pancake", minuteEstimate: "40 minutes", portionEstimate: "4 people", level: "Easy"),
-            Recipe(recipeID: 9, name: "Pumpkin Soup", image: "pumpkin-soup", minuteEstimate: "45 minutes", portionEstimate: "2 people", level: "Medium"),
-            Recipe(recipeID: 10, name: "Dumplings", image: "dumplings", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard")
+            Recipe(recipeID: 4, name: "Pizza", image: "pizza", minuteEstimate: "60 minutes", portionEstimate: "4 people", level: "Hard"),
+            Recipe(recipeID: 5, name: "Blueberry Pancake", image: "blueberry-pancake", minuteEstimate: "40 minutes", portionEstimate: "4 people", level: "Easy"),
+            Recipe(recipeID: 6, name: "Pumpkin Soup", image: "pumpkin-soup", minuteEstimate: "45 minutes", portionEstimate: "2 people", level: "Medium"),
+            Recipe(recipeID: 7, name: "Dumplings", image: "dumplings", minuteEstimate: "60 minutes", portionEstimate: "2 people", level: "Hard")
         ]
         
     }

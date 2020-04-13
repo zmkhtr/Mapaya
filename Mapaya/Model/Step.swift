@@ -9,8 +9,7 @@
 import Foundation
 
 struct Step {
-    let stepID: Int
     let recipeID: Int
-    let step: Int
+    let stepKe: Int
     let detail: String
 }
