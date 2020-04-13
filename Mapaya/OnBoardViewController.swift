@@ -20,11 +20,11 @@ class OnBoardViewController: UIViewController {
     let vege = 2
     let allergie = 4
     var hasil = 0
+    var pref = Preference(isLikeSpicyFood: false, isUserVegan: false, isHaveAllergies: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         // Do any additional setup after loading the view.
     }
     
@@ -42,6 +42,7 @@ class OnBoardViewController: UIViewController {
             preferenceIndicator.image =  UIImage(named: "\(question)-\(temp+1)")
         } else if(temp == 3) {
             hasil+=0
+            MiniDatabase.saveUserTastePreferences(preference: pref)
             performSegue(withIdentifier: "toHomePage", sender: self)
         }
     }
@@ -50,16 +51,20 @@ class OnBoardViewController: UIViewController {
        temp+=1
         if(temp == 1) {
             hasil+=spicy
+            pref.isLikeSpicyFood = true
             preferenceQuestion.text = listQuestions[temp]
             let question: String = "questions"
             preferenceIndicator.image =  UIImage(named: "\(question)-\(temp+1)")
         } else if(temp == 2) {
             hasil+=vege
+            pref.isUserVegan = true
             preferenceQuestion.text = listQuestions[temp]
             let question: String = "questions"
             preferenceIndicator.image =  UIImage(named: "\(question)-\(temp+1)")
         } else if(temp == 3) {
             hasil+=vege
+            pref.isHaveAllergies = true
+            MiniDatabase.saveUserTastePreferences(preference: pref)
             performSegue(withIdentifier: "toHomePage", sender: self)
         }
     }

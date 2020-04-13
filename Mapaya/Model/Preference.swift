@@ -9,7 +9,7 @@
 import Foundation
 
 struct Preference : Codable {
-    let isLikeSpicyFood : Bool
-    let isUserVegan : Bool
-    let isHaveAllergies : Bool
+    var isLikeSpicyFood : Bool
+    var isUserVegan : Bool
+    var isHaveAllergies : Bool
 }
