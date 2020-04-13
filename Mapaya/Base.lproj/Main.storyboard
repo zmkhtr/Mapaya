@@ -814,7 +814,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                                     <rect key="frame" x="4" y="0.0" width="158" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="13"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.21756639333550795" green="0.3401699224803284" blue="0.42920533683902429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -852,7 +852,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                                     <rect key="frame" x="8" y="0.0" width="150" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.19507128000000001" green="0.30317878720000002" blue="0.40001291039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

@@ -80,18 +80,21 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         if collectionView == DropDown2 {
             let cell2 = DropDown2.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! DropDownCollectionViewCell2
             cell2.DropDownLabel2.text = Dropdown2Array[indexPath.item]
+            cell2.DropDownLabel2.sizeToFit()
             
             return cell2
         }
         else if collectionView == DropDown{
             let cell = DropDown.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DropDownCollectionViewCell
             cell.DropDownLabel.text = DropdownArray[indexPath.item]
+            cell.DropDownLabel.sizeToFit()
             
             return cell
         }
         
         let cell3 = IngredientsView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! IngredientViewCell
         cell3.IngredientLabel.text = IngredientsArray[indexPath.item]
+        cell3.IngredientLabel.sizeToFit()
         
         return cell3
     }
@@ -148,10 +151,16 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             DropdownArray.append("Chicken")
             DropdownArray.append("Pork")
             
+            
             DropDown.isHidden = false
             DropDown2.isHidden = true
-            DropDown.backgroundColor = UIColor.systemRed
-            DropDown.layer.cornerRadius = 20
+            DropDown.backgroundColor = UIColor.white
+            DropDown.layer.cornerRadius = 10
+            DropDown.layer.shadowColor = UIColor.darkGray.cgColor
+            DropDown.layer.shadowOffset = CGSize(width: -2, height: 3)
+            DropDown.layer.shadowOpacity = 0.3
+            DropDown.layer.shadowRadius = 10
+            DropDown.layer.masksToBounds = false
             clicked = 1
             DairyButtonOutlet.frame.origin = CGPoint.init(x: 1, y: 670)
             GrainsButtonOutlet.frame.origin = CGPoint.init(x: 125, y: 670)
@@ -186,7 +195,13 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             DropDown.isHidden = false
             DropDown2.isHidden = true
             clicked = 1
-            DropDown.backgroundColor = UIColor.systemGreen
+            DropDown.backgroundColor = UIColor.white
+            DropDown.layer.cornerRadius = 10
+            DropDown.layer.shadowColor = UIColor.darkGray.cgColor
+            DropDown.layer.shadowOffset = CGSize(width: -2, height: 3)
+            DropDown.layer.shadowOpacity = 0.3
+            DropDown.layer.shadowRadius = 10
+            DropDown.layer.masksToBounds = false
             DropDown.layer.cornerRadius = 20
             DairyButtonOutlet.frame.origin = CGPoint.init(x: 1, y: 670)
             GrainsButtonOutlet.frame.origin = CGPoint.init(x: 125, y: 670)
@@ -221,7 +236,13 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             
             DropDown.isHidden = false
             DropDown2.isHidden = true
-            DropDown.backgroundColor = UIColor.systemBlue
+            DropDown.backgroundColor = UIColor.white
+            DropDown.layer.cornerRadius = 10
+            DropDown.layer.shadowColor = UIColor.darkGray.cgColor
+            DropDown.layer.shadowOffset = CGSize(width: -2, height: 3)
+            DropDown.layer.shadowOpacity = 0.3
+            DropDown.layer.shadowRadius = 10
+            DropDown.layer.masksToBounds = false
             DropDown.layer.cornerRadius = 20
             clicked = 1
             DairyButtonOutlet.frame.origin = CGPoint.init(x: 1, y: 670)
@@ -257,7 +278,13 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             
             DropDown2.isHidden = false
             DropDown.isHidden = true
-            DropDown2.backgroundColor = UIColor.systemGray
+            DropDown2.backgroundColor = UIColor.white
+            DropDown2.layer.cornerRadius = 10
+            DropDown2.layer.shadowColor = UIColor.darkGray.cgColor
+            DropDown2.layer.shadowOffset = CGSize(width: -2, height: 3)
+            DropDown2.layer.shadowOpacity = 0.3
+            DropDown2.layer.shadowRadius = 10
+            DropDown2.layer.masksToBounds = false
             DropDown2.layer.cornerRadius = 20
             clicked = 1
             DairyButtonOutlet.frame.origin = CGPoint.init(x: 1, y: 560)
@@ -291,7 +318,13 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             
             DropDown2.isHidden = false
             DropDown.isHidden = true
-            DropDown2.backgroundColor = UIColor.systemOrange
+            DropDown2.backgroundColor = UIColor.white
+            DropDown2.layer.cornerRadius = 10
+            DropDown2.layer.shadowColor = UIColor.darkGray.cgColor
+            DropDown2.layer.shadowOffset = CGSize(width: -2, height: 3)
+            DropDown2.layer.shadowOpacity = 0.3
+            DropDown2.layer.shadowRadius = 10
+            DropDown2.layer.masksToBounds = false
             DropDown2.layer.cornerRadius = 20
             clicked = 1
             DairyButtonOutlet.frame.origin = CGPoint.init(x: 1, y: 560)
@@ -329,7 +362,13 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             
             DropDown2.isHidden = false
             DropDown.isHidden = true
-            DropDown2.backgroundColor = UIColor.systemYellow
+            DropDown2.backgroundColor = UIColor.white
+            DropDown2.layer.cornerRadius = 10
+            DropDown2.layer.shadowColor = UIColor.darkGray.cgColor
+            DropDown2.layer.shadowOffset = CGSize(width: -2, height: 3)
+            DropDown2.layer.shadowOpacity = 0.3
+            DropDown2.layer.shadowRadius = 10
+            DropDown2.layer.masksToBounds = false
             DropDown2.layer.cornerRadius = 20
             clicked = 1
             DairyButtonOutlet.frame.origin = CGPoint.init(x: 1, y: 560)
