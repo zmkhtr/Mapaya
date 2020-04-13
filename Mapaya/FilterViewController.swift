@@ -39,6 +39,23 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var IngredientsView: UICollectionView!
     
+    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!{
+        didSet{
+            collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
+    @IBOutlet weak var collectionLayout1: UICollectionViewFlowLayout!{
+        didSet{
+            collectionLayout1.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
+    
+    @IBOutlet weak var collectionLayout2: UICollectionViewFlowLayout!{
+        didSet{
+            collectionLayout2.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         IngredientsArray.removeAll()
@@ -82,9 +99,18 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == DropDown2 {
             let temp = "\(Dropdown2Array[indexPath.item])"
-            IngredientsArray.append(temp)
-            IngredientsView.reloadData()
-            LabelView.text = "Tap Item to Cancel"
+            
+            if(IngredientsArray.contains(Dropdown2Array[indexPath.item])){
+                LabelView.text = "You Already add that item"
+            }
+            else{
+                IngredientsArray.append(temp)
+                print(IngredientsArray[indexPath.item])
+                IngredientsView.reloadData()
+                LabelView.text = "Tap Item to Cancel"
+
+            }
+            
         }
         else if collectionView == IngredientsView{
             if IngredientsArray.count == 1 {
@@ -99,10 +125,17 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         else{
             let temp = "\(DropdownArray[indexPath.item])"
-            IngredientsArray.append(temp)
-            IngredientsView.reloadData()
-            LabelView.text = "Tap Item to Cancel"
+            
+            if(IngredientsArray.contains(DropdownArray[indexPath.item])){
+                LabelView.text = "You Already add that item"
+            }
+            else{
+                IngredientsArray.append(temp)
+                print(IngredientsArray)
+                IngredientsView.reloadData()
+                LabelView.text = "Tap Item to Cancel"
 
+            }
         }
     }
     
