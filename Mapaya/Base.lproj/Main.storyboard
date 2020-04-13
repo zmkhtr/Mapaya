@@ -159,14 +159,14 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-Pg-tsH">
-                                        <rect key="frame" x="33" y="578" width="53" height="16"/>
+                                        <rect key="frame" x="33" y="578" width="121" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9Q-RA-mqx">
-                                        <rect key="frame" x="33" y="602" width="68" height="16"/>
+                                        <rect key="frame" x="33" y="602" width="121" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -243,6 +243,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                         <outlet property="labelTime" destination="z9Q-RA-mqx" id="u9g-G3-VqL"/>
                         <outlet property="overlayView" destination="htQ-Ca-mrk" id="Eoy-1D-42g"/>
                         <outlet property="thumbImageView" destination="y5b-jG-fuM" id="0Hx-Sv-8a0"/>
+                        <segue destination="Olz-MV-vjs" kind="presentation" identifier="toDetailSwipeUp" modalPresentationStyle="fullScreen" id="Hvn-BA-sa8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Rr-ar-GP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -345,6 +346,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Vr-8U-6yO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1GV-EI-HMu"/>
                     <connections>
                         <outlet property="detailFoodName" destination="Zn6-lJ-qbo" id="IlQ-YW-Qti"/>
                         <outlet property="detailImage" destination="pMK-q5-UVS" id="WeU-Gp-U59"/>
@@ -482,7 +484,6 @@ allows you to choose your recipe based on your ingredients and preferences.</str
         <!--Navigation Controller-->
         <scene sceneID="l3e-f0-Eqd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e15-k7-VMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aVM-Nz-19D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uiv-jb-k71">
@@ -494,6 +495,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dgH-7U-jcX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e15-k7-VMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-658" y="138"/>
         </scene>
@@ -734,6 +736,9 @@ allows you to choose your recipe based on your ingredients and preferences.</str
             <point key="canvasLocation" x="3389.8550724637685" y="141.96428571428569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hvn-BA-sa8"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Dairy" width="264" height="264"/>

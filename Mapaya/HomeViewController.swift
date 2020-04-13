@@ -103,6 +103,10 @@ class HomeViewController: UIViewController {
                 }
             }
             
+            if card.center.y > 50 && card.center.x > 75 && card.center.y < (view.frame.width - 75) {
+                performSegue(withIdentifier: "toDetailSwipeUp", sender: self)
+            }
+            
             UIView.animate(withDuration: 0.2) {
                 //                self.cardView.center = self.view.center
                 card.center = self.view.center
@@ -111,6 +115,12 @@ class HomeViewController: UIViewController {
         }
         
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailPage {
+            destination.recipe = sender as? Recipe
+        }
     }
     
         func saveToBookmark(recipes : Recipe?){
