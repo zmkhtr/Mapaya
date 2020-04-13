@@ -8,8 +8,6 @@
 
 import Foundation
 
-struct Filter {
-    let filterID: Int
-    let recipeID: Int
+struct Filter : Codable{
     let name: [Ingredient]
 }
