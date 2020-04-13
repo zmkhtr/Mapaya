@@ -215,12 +215,6 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                     <outletCollection property="gestureRecognizers" destination="nbn-XB-dSs" appends="YES" id="5RC-9L-LLw"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vig-1D-tXy">
-                                <rect key="frame" x="20" y="60" width="26" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" image="gear" catalog="system"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mapaya" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPy-iX-SUy">
                                 <rect key="frame" x="125" y="26" width="164" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -228,6 +222,15 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                                 <color key="textColor" red="0.92941176470588238" green="0.53725490196078429" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vig-1D-tXy">
+                                <rect key="frame" x="27" y="46" width="35" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="gear" catalog="system"/>
+                                <connections>
+                                    <segue destination="fn0-no-B6B" kind="show" id="mIt-yo-p0n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sd1-Cd-Yd4"/>
@@ -253,6 +256,109 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2634.7826086956525" y="581.25"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="cLp-ey-aW2">
+            <objects>
+                <viewController id="fn0-no-B6B" customClass="SettingsViewController" customModule="Mapaya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c9Z-sx-rus">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYE-fC-EKB">
+                                <rect key="frame" x="47" y="135" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-Br-TIS">
+                                        <rect key="frame" x="262" y="-3" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="yes"/>
+                                        <connections>
+                                            <action selector="buttonSpicy:" destination="fn0-no-B6B" eventType="touchUpInside" id="nuy-gn-E8U"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spicy Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1H-1e-mYf">
+                                        <rect key="frame" x="8" y="11" width="91" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yyR-fK-H4P">
+                                <rect key="frame" x="47" y="188" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegetarian/Vegan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaL-I4-Zaq">
+                                        <rect key="frame" x="8" y="11" width="144" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVk-w4-FwH">
+                                        <rect key="frame" x="262" y="-3" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="no"/>
+                                        <connections>
+                                            <action selector="buttonVege:" destination="fn0-no-B6B" eventType="touchUpInside" id="yVE-fr-77e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-MC-JS8">
+                                <rect key="frame" x="47" y="241" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ot-N9-muZ">
+                                        <rect key="frame" x="8" y="11" width="70" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNY-aK-NEw">
+                                        <rect key="frame" x="262" y="-3" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="no"/>
+                                        <connections>
+                                            <action selector="buttonAllergie:" destination="fn0-no-B6B" eventType="touchUpInside" id="W43-Hn-Jso"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGb-jD-CMh">
+                                <rect key="frame" x="20" y="58" width="67" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="chevron.left" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="fn0-no-B6B" eventType="touchUpInside" id="0w5-C7-Tcn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3r2-od-hLR"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="outletAllergie" destination="GNY-aK-NEw" id="mGZ-mp-W7l"/>
+                        <outlet property="outletSpicy" destination="GXY-Br-TIS" id="Cea-Nh-WUv"/>
+                        <outlet property="outletVege" destination="nVk-w4-FwH" id="CFS-AM-Sh8"/>
+                        <outlet property="viewAllergie" destination="O8s-MC-JS8" id="StE-6u-3TE"/>
+                        <outlet property="viewSpicy" destination="MYE-fC-EKB" id="GT6-9S-PCg"/>
+                        <outlet property="viewVege" destination="yyR-fK-H4P" id="88V-r7-iau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8i-yB-U0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3411.594202898551" y="877.90178571428567"/>
         </scene>
         <!--Detail Page-->
         <scene sceneID="cIB-ku-R6Q">
@@ -482,7 +588,6 @@ allows you to choose your recipe based on your ingredients and preferences.</str
         <!--Navigation Controller-->
         <scene sceneID="l3e-f0-Eqd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e15-k7-VMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aVM-Nz-19D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uiv-jb-k71">
@@ -494,6 +599,7 @@ allows you to choose your recipe based on your ingredients and preferences.</str
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dgH-7U-jcX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e15-k7-VMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-658" y="138"/>
         </scene>
@@ -755,8 +861,10 @@ allows you to choose your recipe based on your ingredients and preferences.</str
         <image name="clock" width="17" height="17"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="mapaya" width="482" height="140"/>
+        <image name="no" width="100" height="100"/>
         <image name="person.fill" width="14" height="15"/>
         <image name="questions-1" width="554" height="98"/>
         <image name="sandwich" width="500" height="500"/>
+        <image name="yes" width="100" height="100"/>
     </resources>
 </document>
